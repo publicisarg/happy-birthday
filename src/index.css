@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.canvas {
+  position: relative;
+  background-color: #EBECF0;
+  width: 900px;
+  height: 800px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.box {
+  position: absolute;
+  cursor: move;
+  max-width: 215px;
+}
+.cls-1{fill:#1d1d1b}
+.cls-3 {
+  fill: #e63a45;
+}
+.cls-4 {
+  fill: #fff;
+}
+path.cls-5 {
+  fill: #ffe366;
+}
+path.cls-6{
+  fill: #1d1d1b;
+}
+.cls-7 {
+  fill: #6cc7e2;
+}
+.checkbox-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+}
+.checkbox-icon input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+}
+
+.checkbox-icon .icon .open {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.checkbox-icon .icon .close {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #333;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.checkbox-icon input[type="checkbox"]:checked + .icon .open {
+  opacity: 1;
+}
+.checkbox-icon input[type="checkbox"]:checked + .icon .close {
+  opacity: 0;
+}
+.checkbox-icon input[type="checkbox"]:checked + .icon label {
+  background-color: #6b6b6b;
+}

@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.canvas {
+  position: relative;
+  background-color: #EBECF0;
+  width: 100%;
+  height: 400px;
+}
+.box {
+  position: absolute;
+  cursor: move;
+  color: black;
+  max-width: 215px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+}
+
+#sidebar {
+  --tw-translate-x: -100%;
+}
+#menu-close-icon {
+  display: none;
+}
+
+#menu-open:checked ~ #sidebar {
+  --tw-translate-x: 0;
+}
+#menu-open:checked ~ * #mobile-menu-button {
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+#menu-open:checked ~ * #menu-open-icon {
+  display: none;
+}
+#menu-open:checked ~ * #menu-close-icon {
+  display: block;
+}
+.MenuItem{
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.MenuItem span{
+  color: var(--FTyzZQ);
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.itemCanvas{
+  border: 1px solid black;
+}
+.checkbox-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox-icon input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+}
+
+.checkbox-icon .icon i {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.checkbox-icon input[type="checkbox"]:checked + .icon i {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+      --tw-translate-x: 0;
+  }
+}
